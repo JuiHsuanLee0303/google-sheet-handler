@@ -1,0 +1,22 @@
+# Google Sheets API Configuration
+credentials_path: "credentials/service-account.json"  # Path to your Google Service Account credentials
+spreadsheet_id: ""  # Default spreadsheet ID (optional)
+
+# Retry Configuration
+retry:
+  max_attempts: 3  # Maximum number of retry attempts
+  delay: 1  # Initial delay in seconds
+  backoff: 2  # Multiplicative backoff factor
+
+# Logging Configuration
+logging:
+  level: INFO  # Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  file: "logs/sheet_operations.log"  # Log file path
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"  # Log format
+
+# Sheet Configuration
+default_sheet_name: "Sheet1"  # Default sheet name
+columns:
+  run: "RUN"  # Column name for run ID
+  status: "STATUS"  # Column name for status
+  timestamp: "TIMESTAMP"  # Column name for timestamp 
